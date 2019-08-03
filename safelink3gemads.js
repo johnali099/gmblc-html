@@ -34,8 +34,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
                     var randindex = Math.random() * links.length;
                     randindex = parseInt(randindex);
                 }
-                resultgenerate = links[randindex];
-                adlinkfly_url.val(resultgenerate);
+                adlinkfly_url.val(links[randindex]);
             } else {
                 adlinkfly_url.val('No result!');
             }
