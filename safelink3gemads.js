@@ -17,13 +17,16 @@ function adlinkfly_base64_encode(e) {
 function Random2() {
 var links = [
               "www.gemads.info/2019/08/the-price-of-long-auto-loans.html",
+              "www.gemads.info/p/insurance.html",
               "www.gemads.info/2019/08/potential-buyers-line-up-for-williams.html",
               "www.gemads.info/2019/07/stocks-sag-on-war-fear-end-quarter-off.html",
               "www.gemads.info/2019/01/murdoch-to-expand-empire-with-chris.html",
               "www.gemads.info/2019/01/stocks-fall-before-cpi-data-boeing-jumps.html",
+              "www.gemads.info/p/insurance.html",
               "www.gemads.info/2019/01/preterm-babies-have-smaller-brain-volume.html",
               "www.gemads.info/2019/01/groups-collaborate-on-ethics-code-for.html",
               "www.gemads.info/2019/01/screening-for-colon-cancer-effective.html",
+              "www.gemads.info/2019/08/the-price-of-long-auto-loans.html",
               "www.gemads.info/2019/01/teasing-linked-to-eating-disorder.html",
               "www.gemads.info/2019/04/more-weeks-on-pill-reduces-womens.html"]
 
