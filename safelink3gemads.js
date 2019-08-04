@@ -16,10 +16,16 @@ function adlinkfly_base64_encode(e) {
 
 function Random2() {
 var links = [
-              "google.com",
-              "youtube.com",
-              "reddit.com",
-              "apple.com"]
+              "www.gemads.info/2019/08/the-price-of-long-auto-loans.html",
+              "www.gemads.info/2019/08/potential-buyers-line-up-for-williams.html",
+              "www.gemads.info/2019/07/stocks-sag-on-war-fear-end-quarter-off.html",
+              "www.gemads.info/2019/01/murdoch-to-expand-empire-with-chris.html",
+              "www.gemads.info/2019/01/stocks-fall-before-cpi-data-boeing-jumps.html",
+              "www.gemads.info/2019/01/preterm-babies-have-smaller-brain-volume.html",
+              "www.gemads.info/2019/01/groups-collaborate-on-ethics-code-for.html",
+              "www.gemads.info/2019/01/screening-for-colon-cancer-effective.html",
+              "www.gemads.info/2019/01/teasing-linked-to-eating-disorder.html",
+              "www.gemads.info/2019/04/more-weeks-on-pill-reduces-womens.html"]
 
               // get a random number between 0 and the number of links
               var randIdx = Math.random() * links.length;
@@ -80,8 +86,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
             else
                 for (o = 0; o < l.length; o++) {
                     var t = adlinkfly_get_host_name(l[o].getAttribute("href"));
-                    t.length > 0 && -1 === adlinkfly_exclude_domains.indexOf(t) ? l[o].href = Random1() + "?o=" + adlinkfly_base64_encode(l[o].href)  : "magnet:" === l[o].protocol && (l[o].href = Random1() + "?o=" + adlinkfly_base64_encode(l[o].href) )
+                    t.length > 0 && -1 === adlinkfly_exclude_domains.indexOf(t) ? l[o].href = Random2() + "?o=" + adlinkfly_base64_encode(l[o].href)  : "magnet:" === l[o].protocol && (l[o].href = Random2() + "?o=" + adlinkfly_base64_encode(l[o].href) )
                 } else
-                    for (var o = 0; o < l.length; o++)(t = adlinkfly_get_host_name(l[o].getAttribute("href"))).length > 0 && adlinkfly_domains.indexOf(t) > -1 ? l[o].href = Random1() + "?o=" + adlinkfly_base64_encode(l[o].href) : "magnet:" === l[o].protocol && (l[o].href = Random1() + "?o=" + adlinkfly_base64_encode(l[o].href)  )
+                    for (var o = 0; o < l.length; o++)(t = adlinkfly_get_host_name(l[o].getAttribute("href"))).length > 0 && adlinkfly_domains.indexOf(t) > -1 ? l[o].href = Random2() + "?o=" + adlinkfly_base64_encode(l[o].href) : "magnet:" === l[o].protocol && (l[o].href = Random1() + "?o=" + adlinkfly_base64_encode(l[o].href)  )
 
 });
