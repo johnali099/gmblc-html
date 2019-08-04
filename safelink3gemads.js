@@ -52,20 +52,19 @@ function Random1() {
                     }
                     links[i] = link;
                     var randindex = Math.random() * links.length;
-                    randindex = parseInt(randindex);
+                    randindex = parseInt(randindex,10);
                 }
-                adlinkfly_url.val(links[randindex]);
-                linku = adlinkfly_url.val(links[randindex]);
+                //adlinkfly_url.val(links[randindex]);
+                //linku = adlinkfly_url.val(links[randindex]);
+                var linkgue= links[randindex];
+
+                return linkgue;
             } else {
                 adlinkfly_url.val('No result!');
             }
-        },
-        error: function() {
-            adlinkfly_url.val('Error loading feed!');
         }
-
     });
-    return linku;
+    return linkgue;
 }
 
 document.addEventListener("DOMContentLoaded", function(e) {
