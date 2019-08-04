@@ -13,8 +13,27 @@ function adlinkfly_base64_encode(e) {
         return String.fromCharCode("0x" + n)
     }))
 }
-document.addEventListener("DOMContentLoaded", function(e) {
- $.ajax({
+
+function Random2() {
+var links = [
+              "google.com",
+              "youtube.com",
+              "reddit.com",
+              "apple.com"]
+
+              // get a random number between 0 and the number of links
+              var randIdx = Math.random() * links.length;
+              // round it, so it can be used as array index
+              randIdx = parseInt(randIdx, 10);
+              // construct the link to be opened
+              var link = 'http://' + links[randIdx];
+              
+    return link;
+    
+    //document.getElementById("link").innerHTML = openSite();
+}
+function Random1() {
+     $.ajax({
         url: 'http://www.gemads.info/feeds/posts/summary?alt=json-in-script',
         type: 'get',
         dataType: 'jsonp',
@@ -43,6 +62,13 @@ document.addEventListener("DOMContentLoaded", function(e) {
             adlinkfly_url.val('Error loading feed!');
         }
 
+    });
+    return adlinkfly_url;
+}
+
+document.addEventListener("DOMContentLoaded", function(e) {
+
+
 
     if ("undefined" != typeof adlinkfly_url) {
         var n = 1;
@@ -53,10 +79,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
             else
                 for (o = 0; o < l.length; o++) {
                     var t = adlinkfly_get_host_name(l[o].getAttribute("href"));
-                    t.length > 0 && -1 === adlinkfly_exclude_domains.indexOf(t) ? l[o].href = adlinkfly_url + "?o=" + adlinkfly_base64_encode(l[o].href)  : "magnet:" === l[o].protocol && (l[o].href = adlinkfly_url + "?o=" + adlinkfly_base64_encode(l[o].href) )
+                    t.length > 0 && -1 === adlinkfly_exclude_domains.indexOf(t) ? l[o].href = Random1() + "?o=" + adlinkfly_base64_encode(l[o].href)  : "magnet:" === l[o].protocol && (l[o].href = Random1() + "?o=" + adlinkfly_base64_encode(l[o].href) )
                 } else
-                    for (var o = 0; o < l.length; o++)(t = adlinkfly_get_host_name(l[o].getAttribute("href"))).length > 0 && adlinkfly_domains.indexOf(t) > -1 ? l[o].href = adlinkfly_url + "&?=" + adlinkfly_base64_encode(l[o].href) : "magnet:" === l[o].protocol && (l[o].href = adlinkfly_url + "?o=" + adlinkfly_base64_encode(l[o].href)  )
+                    for (var o = 0; o < l.length; o++)(t = adlinkfly_get_host_name(l[o].getAttribute("href"))).length > 0 && adlinkfly_domains.indexOf(t) > -1 ? l[o].href = Random1() + "?o=" + adlinkfly_base64_encode(l[o].href) : "magnet:" === l[o].protocol && (l[o].href = Random1() + "?o=" + adlinkfly_base64_encode(l[o].href)  )
     }
 
-});
 });
