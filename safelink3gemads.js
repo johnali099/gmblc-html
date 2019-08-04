@@ -33,6 +33,7 @@ var links = [
     //document.getElementById("link").innerHTML = openSite();
 }
 function Random1() {
+    var linku;
      $.ajax({
         url: 'http://www.gemads.info/feeds/posts/summary?alt=json-in-script',
         type: 'get',
@@ -54,6 +55,7 @@ function Random1() {
                     randindex = parseInt(randindex);
                 }
                 adlinkfly_url.val(links[randindex]);
+                linku = adlinkfly_url.val(links[randindex]);
             } else {
                 adlinkfly_url.val('No result!');
             }
@@ -63,7 +65,7 @@ function Random1() {
         }
 
     });
-    return adlinkfly_url;
+    return linku;
 }
 
 document.addEventListener("DOMContentLoaded", function(e) {
@@ -79,8 +81,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
             else
                 for (o = 0; o < l.length; o++) {
                     var t = adlinkfly_get_host_name(l[o].getAttribute("href"));
-                    t.length > 0 && -1 === adlinkfly_exclude_domains.indexOf(t) ? l[o].href = Random2() + "?o=" + adlinkfly_base64_encode(l[o].href)  : "magnet:" === l[o].protocol && (l[o].href = Random2() + "?o=" + adlinkfly_base64_encode(l[o].href) )
+                    t.length > 0 && -1 === adlinkfly_exclude_domains.indexOf(t) ? l[o].href = Random1() + "?o=" + adlinkfly_base64_encode(l[o].href)  : "magnet:" === l[o].protocol && (l[o].href = Random1() + "?o=" + adlinkfly_base64_encode(l[o].href) )
                 } else
-                    for (var o = 0; o < l.length; o++)(t = adlinkfly_get_host_name(l[o].getAttribute("href"))).length > 0 && adlinkfly_domains.indexOf(t) > -1 ? l[o].href = Random2() + "?o=" + adlinkfly_base64_encode(l[o].href) : "magnet:" === l[o].protocol && (l[o].href = Random2() + "?o=" + adlinkfly_base64_encode(l[o].href)  )
+                    for (var o = 0; o < l.length; o++)(t = adlinkfly_get_host_name(l[o].getAttribute("href"))).length > 0 && adlinkfly_domains.indexOf(t) > -1 ? l[o].href = Random1() + "?o=" + adlinkfly_base64_encode(l[o].href) : "magnet:" === l[o].protocol && (l[o].href = Random1() + "?o=" + adlinkfly_base64_encode(l[o].href)  )
 
 });
