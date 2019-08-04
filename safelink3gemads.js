@@ -38,45 +38,8 @@ var links = [
     
     //document.getElementById("link").innerHTML = openSite();
 }
-function Random1() {
-    var linku;
-     $.ajax({
-        url: 'http://www.gemads.info/feeds/posts/summary?alt=json-in-script',
-        type: 'get',
-        dataType: 'jsonp',
-        success: function(data) {
-            var link = '',
-                content = data.feed.entry,
-                links = new Array();
-            if (content !== undefined) {
-                for (var i = 0; i < content.length; i++) {
-                    for (var j = 0; j < content[i].link.length; j++) {
-                        if (content[i].link[j].rel == "alternate") {
-                            link = content[i].link[j].href;
-                            break;
-                        }
-                    }
-                    links[i] = link;
-                    var randindex = Math.random() * links.length;
-                    randindex = parseInt(randindex,10);
-                }
-                //adlinkfly_url.val(links[randindex]);
-                //linku = adlinkfly_url.val(links[randindex]);
-                var linkgue= links[randindex];
-
-                return linkgue;
-            } else {
-                adlinkfly_url.val('No result!');
-            }
-        }
-    });
-    return linkgue;
-}
 
 document.addEventListener("DOMContentLoaded", function(e) {
-
-
-
 
         var n = 1;
         "undefined" != typeof adlinkfly_advert && (2 == adlinkfly_advert && (n = 2), 0 == adlinkfly_advert && (n = 0));
