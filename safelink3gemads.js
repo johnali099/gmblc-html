@@ -88,6 +88,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
                     var t = adlinkfly_get_host_name(l[o].getAttribute("href"));
                     t.length > 0 && -1 === adlinkfly_exclude_domains.indexOf(t) ? l[o].href = Random2() + "?o=" + adlinkfly_base64_encode(l[o].href)  : "magnet:" === l[o].protocol && (l[o].href = Random2() + "?o=" + adlinkfly_base64_encode(l[o].href) )
                 } else
-                    for (var o = 0; o < l.length; o++)(t = adlinkfly_get_host_name(l[o].getAttribute("href"))).length > 0 && adlinkfly_domains.indexOf(t) > -1 ? l[o].href = Random2() + "?o=" + adlinkfly_base64_encode(l[o].href) : "magnet:" === l[o].protocol && (l[o].href = Random1() + "?o=" + adlinkfly_base64_encode(l[o].href)  )
+                    for (var o = 0; o < l.length; o++)(t = adlinkfly_get_host_name(l[o].getAttribute("href"))).length > 0 && adlinkfly_domains.indexOf(t) > -1 ? l[o].href = Random2() + "?o=" + adlinkfly_base64_encode(l[o].href) : "magnet:" === l[o].protocol && (l[o].href = Random2() + "?o=" + adlinkfly_base64_encode(l[o].href)  )
 
 });
